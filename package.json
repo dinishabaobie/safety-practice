@@ -1,0 +1,8 @@
+{
+  "name": "safety-practice",
+  "private": true,
+  "description": "安全研习 · 承包商安全培训题库（纯静态站点，站点文件在 dist/）",
+  "scripts": {
+    "build": "echo \"Static site, nothing to build. Publish dist/\""
+  }
+}

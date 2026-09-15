@@ -9,3 +9,5 @@
 - 进度保存在当前浏览器本地，手机优先
 
 纯静态页面，站点文件在 `dist/`，推送 `main` 后由 GitHub Actions 自动部署到 Pages。
+
+Cloudflare Pages：输出目录 `dist`；构建命令留空，或填 `npm run build`（空操作）。
