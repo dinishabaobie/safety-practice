@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#183e36"><title>安全研习 · 承包商安全培训题库</title><meta name="description" content="机辆分公司承包商安全培训题库，300道原题，支持顺序练习、随机练习与错题复习。"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="questions.js" defer></script><script src="app.js" defer></script></head>
+<body>
+<!-- Purpose: 尤诺的安全培训考试练习。Mode: Operate，进入即答题。
+World: 日间阅读场景，浅灰白试卷与深松绿导航，中文系统字体。
+Structure: 左侧练习模式，中间试题，右侧可折叠题号索引。
+Interaction: 显式提交、多选完整匹配、原题解析、本机错题与进度。
+Responsive: 手机单列，触控选项，题号索引在题目下方。 -->
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg"><symbol id="i-book" viewBox="0 0 24 24"><path d="M3 5c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2zM12 7v15"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12M3 6h1M3 12h1M3 18h1"/></symbol><symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 5h3c4 0 8 14 12 14h3M17 15l4 4-4 4M3 19h3c2 0 4-4 6-7s4-7 6-7h3M17 1l4 4-4 4"/></symbol><symbol id="i-error" viewBox="0 0 24 24"><path d="M5 3h14v18l-7-4-7 4zM12 7v4M12 14h.01"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol></svg>
+<aside class="sidebar">
+<a class="brand" href="./"><span class="brand-mark"><svg><use href="#i-book"/></svg></span><span>安全研习<small>承包商培训 · 第二版</small></span></a>
+<div class="nav-label">我的练习</div><nav id="modes" aria-label="练习模式">
+<button data-mode="sequence" class="nav-item active"><svg><use href="#i-list"/></svg>顺序练习<span class="nav-count">300</span></button>
+<button data-mode="random" class="nav-item"><svg><use href="#i-shuffle"/></svg>随机练习</button>
+<button data-mode="wrong" class="nav-item"><svg><use href="#i-error"/></svg>错题复习<span class="nav-count" id="wrong-count">0</span></button>
+<button data-mode="star" class="nav-item"><svg><use href="#i-star"/></svg>我的收藏<span class="nav-count" id="star-count">0</span></button>
+</nav>
+<div class="sidebar-bottom"><div class="source-mark">题库来源</div><p>机辆分公司<br>承包商安全培训部分知识点</p><span class="source-edition">第二版 · 26 页 · 300 题</span><div class="local-note"><span class="status-dot"></span><span id="save-state" class="save-state">进度自动保存在此浏览器</span></div></div>
+</aside>
+<div class="workspace">
+<header class="topbar"><div class="breadcrumb">安全培训题库<span>/</span><strong id="breadcrumb-mode">顺序练习</strong></div><span class="user-avatar" aria-label="尤诺">尤</span></header>
+<main>
+<section class="page-heading"><div><div class="section-kicker">日积一题，安全多一分</div><h1 id="page-title">把每一道题，练扎实。</h1><p id="page-description">答案与解析均来自原始题库，按自己的节奏开始。</p></div><div class="overall"><span>全题库进度 <strong id="overall-count">0 / 300</strong></span><div class="progress-track"><div id="overall-bar"></div></div></div></section>
+<div class="toolbar"><div class="type-tabs" id="type-tabs" aria-label="按题型练习"><button class="active" data-type="all">全部题型 <span>300</span></button><button data-type="单选题">单选 <span>126</span></button><button data-type="多选题">多选 <span>48</span></button><button data-type="判断题">判断 <span>126</span></button></div><button class="text-button" id="reshuffle" hidden><svg><use href="#i-shuffle"/></svg>重新打乱</button></div>
+<div id="judgment-filter" class="judgment-filter" hidden aria-label="按判断题标准答案筛选"><span>标准答案</span><div><button data-answer="all" class="active">全部 <span>126</span></button><button data-answer="A">答案为正确 <span>66</span></button><button data-answer="B">答案为错误 <span>60</span></button></div><small>按原题答案分组</small></div>
+<div class="practice-layout"><section class="question-area" aria-label="答题区"><div id="question-panel"></div><div class="keyboard-tip"><span><kbd>1</kbd> – <kbd>5</kbd> 选择选项</span><span><kbd>Enter</kbd> 提交 / 下一题</span><span><kbd>←</kbd> <kbd>→</kbd> 切换题目</span></div></section>
+<aside class="overview"><section class="session-stats"><h2>练习记录</h2><div class="stats-row"><div><strong id="answered-stat">0</strong><span>已作答</span></div><div><strong id="correct-stat">—</strong><span>最近作答正确率</span></div></div><p>统计每道题最近一次提交的结果</p></section>
+<details class="question-map" open><summary>答题卡 <span id="map-total">300 题</span></summary><div class="map-legend"><span><i class="legend-correct"></i>答对</span><span><i class="legend-wrong"></i>答错</span><span><i></i>未答</span></div><div id="question-grid" class="question-grid"></div></details><p class="source-note">按第二版题库备考。题目保留原文，实际作业请遵循现行规程。</p></aside></div>
+</main><footer>安全研习<span class="save-state">进度保存在此浏览器，换设备不会同步</span></footer>
+</div><div id="toast" role="status" aria-live="polite"></div>
+</body></html>
